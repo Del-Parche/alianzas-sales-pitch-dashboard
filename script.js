@@ -232,6 +232,7 @@ function handleToggleSwitch(period) {
   document.querySelectorAll("[data-period]").forEach((btn) => {
     btn.classList.remove("active");
     btn.classList.remove("btn-del-parche-pink");
+    btn.classList.remove("text-white");
     btn.classList.add("btn-outline-del-parche-pink");
   });
   
@@ -239,6 +240,7 @@ function handleToggleSwitch(period) {
   activeBtn.classList.add("active");
   activeBtn.classList.remove("btn-outline-del-parche-pink");
   activeBtn.classList.add("btn-del-parche-pink");
+  activeBtn.classList.add("text-white");
 
   // Recalculate metrics
   calculateMetrics();
@@ -292,6 +294,7 @@ function handleLanguageSwitch(lang) {
   document.querySelectorAll('[data-lang]').forEach(btn => {
     btn.classList.remove('active');
     btn.classList.remove('btn-del-parche-pink');
+    btn.classList.remove('text-white');
     btn.classList.add('btn-outline-del-parche-pink');
   });
   
@@ -299,6 +302,7 @@ function handleLanguageSwitch(lang) {
   activeLangBtn.classList.add('active');
   activeLangBtn.classList.remove('btn-outline-del-parche-pink');
   activeLangBtn.classList.add('btn-del-parche-pink');
+  activeLangBtn.classList.add('text-white');
 }
 
 // Initialize everything when DOM is loaded
