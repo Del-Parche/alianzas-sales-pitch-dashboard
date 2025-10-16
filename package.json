@@ -1,0 +1,30 @@
+{
+  "name": "del-parche-commission-calculator",
+  "version": "1.0.0",
+  "description": "Commission calculator web app for Del Parche tour company",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static site'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "commission",
+    "calculator",
+    "tour",
+    "tourism",
+    "bogota",
+    "hostel"
+  ],
+  "author": "Del Parche",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

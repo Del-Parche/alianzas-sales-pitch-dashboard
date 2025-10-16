@@ -1,0 +1,205 @@
+/* Custom CSS for Bootstrap + Tailwind Integration */
+
+/* Override Bootstrap button styles for custom Del Parche theme */
+.btn-outline-del-parche-pink {
+  --bs-btn-color: #f26da3;
+  --bs-btn-border-color: #f26da3;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #f26da3;
+  --bs-btn-hover-border-color: #f26da3;
+  --bs-btn-focus-shadow-rgb: 242, 109, 163;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #f26da3;
+  --bs-btn-active-border-color: #f26da3;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #f26da3;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #f26da3;
+}
+
+.btn-del-parche-pink {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #f26da3;
+  --bs-btn-border-color: #f26da3;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ff8bb8;
+  --bs-btn-hover-border-color: #ff8bb8;
+  --bs-btn-focus-shadow-rgb: 242, 109, 163;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #ff8bb8;
+  --bs-btn-active-border-color: #ff8bb8;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #f26da3;
+  --bs-btn-disabled-border-color: #f26da3;
+}
+
+/* Custom form control styles */
+.form-control:focus {
+  border-color: #f26da3;
+  box-shadow: 0 0 0 0.25rem rgba(242, 109, 163, 0.25);
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+/* Floating background elements */
+.floating-bg {
+  animation: float 15s ease-in-out infinite;
+}
+
+/* Custom card hover effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom button group styles */
+.btn-group .btn {
+  transition: all 0.3s ease;
+}
+
+.btn-group .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Custom badge styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Chart container custom styles */
+#barChart {
+  max-height: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group .btn {
+    border-radius: 0.5rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-group .btn:first-child {
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+  }
+  
+  .btn-group .btn:last-child {
+    border-bottom-left-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    margin-bottom: 0;
+  }
+}
+
+/* Dashboard specific styles */
+.dashboard-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(242, 109, 163, 0.1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  border-color: rgba(242, 109, 163, 0.2);
+}
+
+/* KPI Card specific styles */
+.kpi-card {
+  min-height: 120px;
+}
+
+@media (max-width: 576px) {
+  .kpi-card {
+    min-height: 100px;
+  }
+}
+
+/* Form controls responsive */
+@media (max-width: 576px) {
+  .form-control {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Chart responsive */
+@media (max-width: 768px) {
+  #barChart {
+    max-height: 250px;
+  }
+}
+
+@media (min-width: 769px) {
+  #barChart {
+    max-height: 400px;
+  }
+}
+
+/* Additional utility classes for enhanced functionality */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Growth indicators for charts */
+.growth-indicator {
+  position: absolute;
+  background: linear-gradient(135deg, #f26da3, #ff8bb8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Parkinsans', sans-serif;
+  box-shadow: 0 2px 8px rgba(242, 109, 163, 0.4);
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Custom dropdown styles */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f26da3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
