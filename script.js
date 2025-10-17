@@ -26,16 +26,20 @@ function calculateMetrics() {
   const weeklyCheckins = parseFloat(document.getElementById("weeklyCheckins").value) || 0;
   const atv = parseNumber(document.getElementById("atv").value);
   const ltv = parseFloat(document.getElementById("ltv").value) || 0;
+  
+  // Get commission rates from inputs
+  const firstBookingRate = parseFloat(document.getElementById("firstBookingRate").value.replace('%', '')) / 100 || 0.15;
+  const repeatBookingRate = parseFloat(document.getElementById("repeatBookingRate").value.replace('%', '')) / 100 || 0.05;
 
   // Calculate base metrics
   const guestsPerMonth = weeklyCheckins * 4.33;
-  const commissionPerGuest = (atv * 0.15) + ((ltv - 1) * atv * 0.05);
+  const commissionPerGuest = (atv * firstBookingRate) + ((ltv - 1) * atv * repeatBookingRate);
 
   // Define scenarios
   const scenarios = {
-    passive: { name: "Passive", rate: 0.2 },
-    active: { name: "Active", rate: 0.5 },
-    intensive: { name: "Intensive", rate: 0.8 }
+    passive: { name: translations[currentLanguage].scenarios.passive, rate: 0.2 },
+    active: { name: translations[currentLanguage].scenarios.active, rate: 0.5 },
+    intensive: { name: translations[currentLanguage].scenarios.intensive, rate: 0.8 }
   };
 
   // Calculate commissions for each scenario and timeframe
@@ -72,7 +76,7 @@ function calculateMetrics() {
 
 // Create chart data based on selected period
 function getChartData(scenarios, guestsPerMonth, commissionPerGuest) {
-  const labels = Object.keys(scenarios).map((key) => scenarios[key].name);
+  const labels = translations[currentLanguage].chart.labels;
   
   // Calculate base data (1 month)
   const baseData = Object.keys(scenarios).map((key) => {
@@ -326,9 +330,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listeners to all inputs
   const inputs = [
     "capacity",
-    "weeklyCheckins", 
+    "weeklyCheckins",
     "atv",
-    "ltv"
+    "ltv",
+    "firstBookingRate",
+    "repeatBookingRate"
   ];
 
   inputs.forEach((id) => {

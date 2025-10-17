@@ -26,7 +26,8 @@ const translations = {
       intensive: "Full Partnership"
     },
     chart: {
-      title: "Commission Revenue by Scenario"
+      title: "Commission Revenue by Scenario",
+      labels: ['Passive', 'Collaborative', 'Full Partnership']
     }
   },
   es: {
@@ -55,7 +56,8 @@ const translations = {
       intensive: "Alianza Completa"
     },
     chart: {
-      title: "Ingresos por Comisiones por Escenario"
+      title: "Ingresos por Comisiones por Escenario",
+      labels: ['Pasivo', 'Colaborativo', 'Alianza Completa']
     }
   }
 };
