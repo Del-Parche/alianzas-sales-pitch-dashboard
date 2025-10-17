@@ -1,7 +1,7 @@
 // Global variables
 let barChartInstance = null;
 let selectedPeriod = 1;
-let currentLanguage = 'en';
+let currentLanguage = 'es';
 
 // Custom translation system - translations loaded from translations.js
 
