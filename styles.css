@@ -115,6 +115,49 @@
   }
 }
 
+/* Tablet optimizations */
+@media (min-width: 576px) and (max-width: 991px) {
+  .container-fluid {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem !important;
+  }
+  
+  .form-control {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .h4 {
+    font-size: 1.25rem !important;
+  }
+  
+  .h5 {
+    font-size: 1rem !important;
+  }
+  
+  .h6 {
+    font-size: 0.875rem !important;
+  }
+  
+  .display-6 {
+    font-size: 1.5rem !important;
+  }
+  
+  .badge {
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+}
+
 /* Dashboard specific styles */
 .dashboard-card {
   transition: all 0.3s ease;
@@ -146,9 +189,15 @@
 }
 
 /* Chart responsive */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   #barChart {
-    max-height: 250px;
+    max-height: 200px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  #barChart {
+    max-height: 280px;
   }
 }
 
