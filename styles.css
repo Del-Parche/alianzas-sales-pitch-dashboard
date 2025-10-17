@@ -115,46 +115,84 @@
   }
 }
 
-/* Tablet optimizations */
-@media (min-width: 576px) and (max-width: 991px) {
+/* Universal zoom out effect for all screens */
+body {
+  transform: scale(0.9) !important;
+  transform-origin: top left !important;
+  width: 111.11% !important; /* Compensate for scale */
+}
+
+/* Screen fit optimizations for tablets and smaller laptops */
+@media (min-width: 576px) and (max-width: 1200px) {
+  
   .container-fluid {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   
   .card-body {
-    padding: 1rem !important;
+    padding: 0.75rem !important;
   }
   
   .btn {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.75rem !important;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem !important;
   }
   
   .form-control {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
   }
   
   .h4 {
-    font-size: 1.25rem !important;
+    font-size: 1.1rem !important;
   }
   
   .h5 {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
   
   .h6 {
-    font-size: 0.875rem !important;
+    font-size: 0.8rem !important;
   }
   
   .display-6 {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
   
   .badge {
-    font-size: 0.65rem !important;
-    padding: 0.25rem 0.5rem !important;
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+  
+  .mb-3 {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .py-3 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .py-4 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  
+  .gap-4 {
+    gap: 0.75rem !important;
+  }
+  
+  .gap-3 {
+    gap: 0.6rem !important;
+  }
+  
+  .gap-2 {
+    gap: 0.4rem !important;
   }
 }
 
@@ -197,11 +235,17 @@
 
 @media (min-width: 577px) and (max-width: 768px) {
   #barChart {
-    max-height: 280px;
+    max-height: 250px;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 991px) {
+  #barChart {
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 992px) {
   #barChart {
     max-height: 400px;
   }
@@ -252,3 +296,4 @@
   background-size: 16px;
   padding-right: 40px;
 }
+
